@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAYA — Design Presentation</title>
+<meta name="description" content="PAYA — Pearl of Africa Youth Alliance. Apple-style design presentation of the landing page and store experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0066cc; --ink: #1d1d1f; --muted: #7a7a7a; --hair: #e0e0e0;
+    --parchment: #f5f5f7; --tile: #272729; --black: #000000;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "SF Pro Text", system-ui, -apple-system, "Inter", sans-serif;
+    color: var(--ink); background: #fff; -webkit-font-smoothing: antialiased;
+  }
+  .nav {
+    position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.85);
+    backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .nav-inner { max-width: 1024px; margin: 0 auto; padding: 0 20px; height: 52px; display: flex; align-items: center; justify-content: space-between; }
+  .nav b { font-size: 15px; letter-spacing: 0.18em; }
+  .nav a { color: var(--ink); text-decoration: none; font-size: 14px; margin-left: 22px; opacity: 0.8; }
+  .nav a:hover { color: var(--blue); opacity: 1; }
+  .header { max-width: 860px; margin: 0 auto; padding: 96px 24px 40px; text-align: center; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
+  h1 { font-size: 56px; font-weight: 600; letter-spacing: -0.022em; line-height: 1.07; margin-bottom: 16px; }
+  .lead { font-size: 21px; color: var(--muted); max-width: 640px; margin: 0 auto 32px; line-height: 1.45; }
+  .pill { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; border-radius: 9999px; padding: 12px 26px; font-size: 16px; }
+  .pill:hover { background: #0071e3; }
+  .toc { max-width: 860px; margin: 0 auto; padding: 0 24px 24px; text-align: center; }
+  .toc a { color: var(--blue); text-decoration: none; margin: 0 12px; font-size: 14px; }
+  .toc a:hover { text-decoration: underline; }
+
+  section.strand { padding: 72px 0 96px; }
+  .strand-head { max-width: 860px; margin: 0 auto 40px; padding: 0 24px; text-align: center; }
+  .strand-head h2 { font-size: 36px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .strand-head p { font-size: 17px; color: var(--muted); line-height: 1.47; }
+  .frame { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .device { border-radius: 18px; border: 1px solid var(--hair); overflow: hidden; background: var(--parchment); }
+  .device img { width: 100%; display: block; height: auto; }
+  .caption { text-align: center; font-size: 13px; color: var(--muted); margin-top: 14px; }
+
+  .duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  .duo .device { border-radius: 28px; }
+  .duo .card-cap { text-align: center; font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+  .local-note {
+    max-width: 860px; margin: 8px auto 0; padding: 24px; text-align: center;
+    background: var(--parchment); border-radius: 18px; font-size: 15px; color: var(--ink);
+  }
+  .local-note a { color: var(--blue); }
+
+  .prog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .prog-tile { border-radius: 18px; overflow: hidden; border: 1px solid var(--hair); background: #fff; }
+  .prog-tile img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+  .prog-tile .t { padding: 16px 18px 18px; }
+  .prog-tile .t b { display: block; font-size: 15px; font-weight: 600; letter-spacing: -0.015em; }
+  .prog-tile .t span { font-size: 13px; color: var(--muted); }
+
+  .credit { text-align: center; font-size: 12px; color: var(--muted); max-width: 760px; margin: 24px auto 0; padding: 0 24px; }
+
+  footer { background: var(--black); color: #fff; text-align: center; padding: 56px 24px; }
+  footer .t { font-size: 21px; font-weight: 600; margin-bottom: 8px; }
+  footer .s { font-size: 13px; color: #cccccc; }
+  @media (max-width: 640px) { h1 { font-size: 34px; } .lead { font-size: 18px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <b>PAYA</b>
+    <div>
+      <a href="#web">Web</a>
+      <a href="#programs">Programs</a>
+      <a href="#store">Store</a>
+      <a href="#mobile">Mobile</a>
+      <a href="#live">Live demo</a>
+    </div>
+  </div>
+</nav>
+
+<header class="header" id="top">
+  <div class="eyebrow">Pearl of Africa Youth Alliance</div>
+  <h1>Design presentation.</h1>
+  <p class="lead">The complete PAYA digital experience — an Apple-style landing page, full product buy pages with cart, size guide and mobile screens. Every screen follows one design language: pure whites and parchment, a single Action Blue, generous air.</p>
+  <a class="pill" href="#web">Take the tour</a>
+</header>
+<div class="toc">
+  <a href="#web">Landing</a>
+  <a href="#programs">Programs</a>
+  <a href="#store">Store &amp; products</a>
+  <a href="#mobile">Mobile</a>
+  <a href="#live">Live demo</a>
+</div>
+
+<!-- WEB -->
+<section class="strand" id="web">
+  <div class="strand-head">
+    <h2>The landing page.</h2>
+    <p>One long scroll, like Apple.com: true-black nav, hero crest, impact numbers, six programs, and the store entrance.</p>
+  </div>
+  <div class="frame">
+    <div class="device"><img src="screens/1-landing.jpg" alt="PAYA landing page — full scroll"></div>
+    <p class="caption">Landing page — desktop, full scroll (from the live design)</p>
+  </div>
+</section>
+
+<!-- PROGRAMS IN ACTION -->
+<section class="strand" id="programs">
+  <div class="strand-head">
+    <h2>Programs in action.</h2>
+    <p>Real faces behind the six pillars — youth learning, leading and building, from robotics labs to cultural arenas.</p>
+  </div>
+  <div class="prog-grid">
+    <div class="prog-tile"><img src="programs/program-tech.jpg" alt="Youth assembling a robotics project"><div class="t"><b>Innovation &amp; Tech</b><span>Robotics, skills labs and digital creation</span></div></div>
+    <div class="prog-tile"><img src="programs/program-education.jpg" alt="Teacher at the whiteboard with a student raising her hand"><div class="t"><b>Education &amp; Mentorship</b><span>Teaching, scholarships and one-to-one mentoring</span></div></div>
+    <div class="prog-tile"><img src="programs/program-health.jpg" alt="Community health outreach in Kaduna, Nigeria"><div class="t"><b>Health &amp; Wellbeing</b><span>Outreach, mental-health circles and safe spaces</span></div></div>
+    <div class="prog-tile"><img src="programs/program-sports.jpg" alt="Traditional African dancers with drums"><div class="t"><b>Sports &amp; Culture</b><span>Dance, music and heritage pride</span></div></div>
+    <div class="prog-tile"><img src="programs/program-community.jpg" alt="Volunteers packing food donations"><div class="t"><b>Community Service</b><span>Youth-led drives that give back</span></div></div>
+    <div class="prog-tile"><img src="programs/program-environment.jpg" alt="Children planting a tree seedling"><div class="t"><b>Environment &amp; Climate</b><span>Tree planting, clean-ups and green schools</span></div></div>
+  </div>
+  <p class="credit">Program photography: Mikhail Nilov, Katerina Holmes, mk_photoz, Safari Consoler, cottonbro studio, Finalchoice — via Pexels.</p>
+</section>
+
+<!-- STORE -->
+<section class="strand" id="store" style="background: var(--parchment);">
+  <div class="strand-head">
+    <h2>Wear the alliance.</h2>
+    <p>Full product buy pages with live color swatches, size selection, a slide-out cart and a size guide.</p>
+  </div>
+  <div class="frame">
+    <div class="device"><img src="screens/3-tee-buy.jpg" alt="PAYA Crest Tee buy page with cart drawer and size guide"></div>
+    <p class="caption">Crest Tee — buy page with cart drawer &amp; size guide</p>
+  </div>
+  <div style="height:40px"></div>
+  <div class="frame">
+    <div class="device"><img src="screens/4-hoodie-buy.jpg" alt="PAYA Crest Hoodie buy page"></div>
+    <p class="caption">Crest Hoodie — buy page</p>
+  </div>
+</section>
+
+<!-- MOBILE -->
+<section class="strand" id="mobile">
+  <div class="strand-head">
+    <h2>And on the phone.</h2>
+    <p>Everything adapts: single-column tiles, thumb-sized targets, and a mobile buy experience.</p>
+  </div>
+  <div class="duo">
+    <div>
+      <div class="device"><img src="screens/5-mobile-landing.jpg" alt="PAYA mobile landing page"></div>
+      <p class="card-cap">Mobile landing — 375pt</p>
+    </div>
+    <div>
+      <div class="device"><img src="screens/6-mobile-tee-buy.jpg" alt="PAYA mobile tee buy page"></div>
+      <p class="card-cap">Mobile Crest Tee buy page — 375pt</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DEMO -->
+<section class="strand" id="live" style="padding-top:0;">
+  <div class="strand-head">
+    <h2>See it moving.</h2>
+    <p>Beyond the stills — the working page, with our real crest and real product photography.</p>
+  </div>
+  <div class="frame">
+    <div class="local-note">
+      Open <a href="../index.html">PAYA — live landing page</a> (opens alongside this folder).
+      It contains the working interactive page with official brand images.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="t">For a united, innovative and prosperous Africa.</div>
+  <div class="s">PEARL OF AFRICA YOUTH ALLIANCE · © 2026 PAYA · Design presentation</div>
+</footer>
+
+</body>
+</html>
